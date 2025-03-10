@@ -12,10 +12,24 @@
     background-color: #cacaca;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
 nav a {
     text-decoration: none;
     color: #000000;
     margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #2c5282; /* Darker blue on hover */
 }
 
 /* step 7 */
