@@ -77,7 +77,7 @@ function greetingFunc() {
     }
 
     // step 10
-    if (window.location.href.includes("index.html")) {
+    if (window.location.href.includes("index.html") || window.location.pathname === "/" || window.location.pathname.endsWith("/")) {
         const E = document.getElementById("greeting");
         if (E) {
             E.innerHTML = greeting + ", my name is Matthew";
