@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../static/script.js" defer></script>
 </head>
 <body onload="addYear()" style="font-family: Arial">
@@ -28,10 +29,10 @@
     <div class="main">
         <h2>Contact Me</h2>
         
-        <form id="contact-form" onsubmit="return validateForm()">
+        <form id="contact-form">            
             <div>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="username" name="name" required>
             </div>
             <div>
                 <label for="email">Email:</label>
@@ -39,12 +40,15 @@
             </div>
             <div>
                 <label for="comment">Comment:</label>
-                <textarea id="comment" name="comment" required></textarea>
+                <textarea id="text" name="comment" required></textarea>
             </div>
             <div>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" onclick = "validateForm()">
             </div>
         </form>
+
+        <p id = "validation-message"></p>
+
         
         <h3>My Contact Information</h3>
         <table border="1">

@@ -95,8 +95,6 @@ function addYear() {
     if (yearElem) {
         yearElem.textContent = currYear;
     }
-    
-    greetingFunc();
 }
 
 
@@ -106,17 +104,30 @@ function showList() {
     document.getElementById("show-list-btn").style.display = "none";
 }
 
+// lab 4 step 4
+if (typeof jQuery !== 'undefined') {
+    $(document).ready(function() {
+        $("#read-more-btn").click(function() {
+            $("#short-bio, #read-more-btn").hide();
+            $("#full-bio").show();
+        });
+        
+        $("#read-less-btn").click(function() {
+            $("#short-bio, #read-more-btn").show();
+            $("#full-bio").hide();
+        });
+    });
+}
+
 
 
 // lab 4 step 5
 function validateForm() {
-    const nameInput = document.getElementById("name");
-    const emailInput = document.getElementById("email");
-    const commentInput = document.getElementById("comment");
-    
-    const isValid = nameInput.checkValidity() && 
-                    emailInput.checkValidity() && 
-                    commentInput.checkValidity();
-    
-    return isValid;
+    var user = document.getElementById("username");
+    var email = document.getElementById("email");
+    var text = document.getElementById("text");
+    var error = document.getElementById("validation-message");
+    if (!user.checkValidity() || email.checkValidity() || text.checkValidity()) {
+        error.innerHTML = "Please fill out all fields correctly";
+    }
 }

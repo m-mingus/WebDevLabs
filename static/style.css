@@ -57,6 +57,7 @@ table {
     margin: 20px 0;
 }
 
+/* Bio section styling */
 #bio-section {
     margin: 20px 0;
     padding: 10px;
@@ -65,6 +66,55 @@ table {
     background-color: #ffffff;
 }
 
+/* Button styling for lab 4 */
+#read-more-btn, #read-less-btn, #show-list-btn {
+    background-color:  blue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: background-color 0.3s;
+}
+
+#read-more-btn:hover, #read-less-btn:hover, #show-list-btn:hover {
+    background-color: #1a365d;
+}
+
+#show-list-btn {
+    background-color: #46a149;
+}
+
+#show-list-btn:hover {
+    background-color: #3e8e41;
+}
+
+input[type="submit"] {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: blue;
+}
+
+
+.invalid-input {
+    border: 2px solid red !important;
+    background-color: #ffeeee;
+}
+
+#validation-message {
+    width: max-content;
+    margin: auto;
+}
 
 footer {
     margin-top: 30px;
