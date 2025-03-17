@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="../static/script.js" defer></script>
 </head>
-<body style="font-family: Arial">
+<body onload="addYear()" style="font-family: Arial">
     <header>
         <h1 id="webname">Matthew Mingus</h1>
         <nav>
@@ -28,7 +28,7 @@
     <div class="main">
         <h2>Contact Me</h2>
         
-        <form>
+        <form id="contact-form" onsubmit="return validateForm()">
             <div>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -68,7 +68,7 @@
     </div>
     
     <footer>
-        <p>&copy; 2025 Matthew Mingus.</p>
+        <p> <span id="copyYear"></span> Matthew Mingus.</p>
     </footer>
 </body>
 </html>

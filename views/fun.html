@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="../static/script.js" defer></script>
 </head>
-<body style="font-family: Arial">
+<body onload="addYear()" style="font-family: Arial">
     <header>
         <h1 id="webname">Matthew Mingus</h1>
         <nav>
@@ -27,7 +27,8 @@
     
     <div class="main">
         <h2>Things I love to do for fun</h2>
-        <ul>
+        <button id="show-list-btn" onclick="showList()">Click to see...</button>
+        <ul id="fun-list" style="display: none;">
             <li>Playing soccer/ basketball</li>
             <li>Watching sports</li>
             <li>Sleeping</li>
@@ -37,7 +38,7 @@
     </div>
     
     <footer>
-        <p>&copy; 2025 Matthew Mingus.</p>
+        <p> <span id="copyYear"></span> Matthew Mingus.</p>
     </footer>
 </body>
 </html>

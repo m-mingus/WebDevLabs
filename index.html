@@ -10,9 +10,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./static/script.js" defer></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#read-more-btn").click(function() {
+                $("#short-bio, #read-more-btn").hide();
+                $("#full-bio").show();
+            });
+            $("#read-less-btn").click(function() {
+                $("#short-bio, #read-more-btn").show();
+                $("#full-bio").hide();
+            });
+        });
+    </script>
 </head>
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Matthew Mingus</h1>
         <nav>
@@ -29,10 +43,22 @@
         <h2 id="greeting"></h2>
         <img src="./static/headshot.jpeg" alt="Matthew Mingus">
         <p id="intro">Welcome to my personal website. I'm a sophomore undergraduate at CMU pursuing IS. I aim to apply my academics and practical knowledge towards the enhancement and innovation of business practices through technology for a more efficient and sustainable future.</p>
+
+        <div id="bio-section">
+            <p id="short-bio">I'm passionate about using technology to solve business problems...</p>
+            <div id="full-bio" style="display:none;">
+                <p>I'm passionate about using technology to solve business problems. My journey at Carnegie Mellon has equipped me with skills in programming, data analysis, and business strategy. Beyond academics, I am a member of the student-organization ScottyLabs, where I organize on-campus hackathons and contribute to community-wide services for CMU.</p>
+                <p>My goal is to work at the intersection of technology and business, creating innovative solutions that improve efficiency and user experience. I'm particularly interested in product management and software development roles that allow me to leverage both my technical and business knowledge.</p>
+                <button id="read-less-btn">Read Less</button>
+            </div>
+            <button id="read-more-btn">Read More</button>
+        </div>
+
+
     </div>
     
     <footer>
-        <p>&copy; 2025 Matthew Mingus.</p>
+        <p> <span id="copyYear"></span> Matthew Mingus.</p>
     </footer>
 </body>
 </html>

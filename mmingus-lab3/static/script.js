@@ -41,8 +41,8 @@ function findTheBanana(L) {
     }
 }
 
-// findTheBanana(L1);
-// findTheBanana(L2);
+findTheBanana(L1);
+findTheBanana(L2);
 
 
 
@@ -56,8 +56,8 @@ function findTheBananaForEach(L) {
     });
 }
 
-// findTheBananaForEach(L1);
-// findTheBananaForEach(L2);
+findTheBananaForEach(L1);
+findTheBananaForEach(L2);
 
 
 // step 9
@@ -85,38 +85,5 @@ function greetingFunc() {
     }
 }
 
+
 greetingFunc();
-
-
-// lab 4 step 2
-function addYear() {
-    const currYear = new Date().getFullYear();
-    const yearElem = document.getElementById("copyYear");
-    if (yearElem) {
-        yearElem.textContent = currYear;
-    }
-    
-    greetingFunc();
-}
-
-
-// lab 4 step 3
-function showList() {
-    document.getElementById("fun-list").style.display = "block";
-    document.getElementById("show-list-btn").style.display = "none";
-}
-
-
-
-// lab 4 step 5
-function validateForm() {
-    const nameInput = document.getElementById("name");
-    const emailInput = document.getElementById("email");
-    const commentInput = document.getElementById("comment");
-    
-    const isValid = nameInput.checkValidity() && 
-                    emailInput.checkValidity() && 
-                    commentInput.checkValidity();
-    
-    return isValid;
-}
