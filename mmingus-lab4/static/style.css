@@ -116,49 +116,6 @@ input[type="submit"]:hover {
     margin: auto;
 }
 
-
-.funIMG {
-    border-radius: 100%;
-    max-width: 250px;
-    height: auto;
-}
-
-#advice-button {
-    border-radius: 100%;
-    display: inline-block;
-    border-radius: 10%;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
-}
-
-.container {
-    display: inline-block;
-    border-radius: 30%;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
-}
-
-.container button {
-    border-radius: 30%;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
-}
-
-/* flexbox layout lab 5 */
-.mainLayout {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-#item1, #item2, #item3, #item4 {
-    width: 40vw;
-    margin: auto;
-}
-
-iframe {
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-}
-
 footer {
     margin-top: 30px;
     padding: 15px 0;

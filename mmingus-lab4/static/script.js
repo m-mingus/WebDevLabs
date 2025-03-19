@@ -99,10 +99,10 @@ function addYear() {
 
 
 // lab 4 step 3
-// function showList() {
-//     document.getElementById("fun-list").style.display = "block";
-//     document.getElementById("show-list-btn").style.display = "none";
-// }
+function showList() {
+    document.getElementById("fun-list").style.display = "block";
+    document.getElementById("show-list-btn").style.display = "none";
+}
 
 // lab 4 step 4
 if (typeof jQuery !== 'undefined') {
@@ -130,15 +130,4 @@ function validateForm() {
     if (!user.checkValidity() || email.checkValidity() || text.checkValidity()) {
         error.innerHTML = "Please fill out all fields correctly";
     }
-}
-
-
-// lab 5 step 5
-function getAdvice() {
-    fetch('https://api.adviceslip.com/advice')
-    // convert the response to json
-    .then(response => response.json())
-    .then(data => document.getElementById("adviceText").innerText = data.slip.advice)
-    // handle errors with .catch() to show error message if something goes wrong
-    .catch(error => console.log('error', error));
 }

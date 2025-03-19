@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Matthew Mingus">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Matthew Mingus professional website">
+    <title>Matthew Mingus</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()" style="font-family: Arial">
+    <header>
+        <h1 id="webname">Matthew Mingus</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact me</a></li>
+                <li><a href="fun.html">For fun</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="main">
+        <h2>Contact Me</h2>
+        
+        <form id="contact-form">            
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="username" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="comment">Comment:</label>
+                <textarea id="text" name="comment" required></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Submit" onclick = "validateForm()">
+            </div>
+        </form>
+
+        <p id = "validation-message"></p>
+
+        
+        <h3>My Contact Information</h3>
+        <table border="1">
+            <tr>
+                <th>Contact Method</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>mmingus@andrew.cmu.edu</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>(334) 549-9456</td>
+            </tr>
+            <tr>
+                <td>LinkedIn</td>
+                <td>https://www.linkedin.com/in/mmingus/</td>
+            </tr>
+        </table>
+    </div>
+    
+    <footer>
+        <p> <span id="copyYear"></span> Matthew Mingus.</p>
+    </footer>
+</body>
+</html>
