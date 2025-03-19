@@ -140,10 +140,11 @@ input[type="submit"]:hover {
 
 .container {
     display: inline-block;
-    border-radius: 30%;
+    border-radius: 10%;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
     text-align: center;
     margin: 15px auto;
+    display: flex;
 }
 
 .container button {
