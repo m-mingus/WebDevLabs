@@ -121,22 +121,34 @@ input[type="submit"]:hover {
     border-radius: 100%;
     max-width: 250px;
     height: auto;
+    display: block;
 }
 
 #advice-button {
+    background-color: #46a149;
+    color: white;
     border-radius: 100%;
     display: inline-block;
     border-radius: 10%;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
+
+#advice-button:hover {
+    background-color: #3e8e41;
+}   
 
 .container {
     display: inline-block;
     border-radius: 30%;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 15px auto;
 }
 
 .container button {
+    padding: 10px 20px;
+    cursor: pointer;
     border-radius: 30%;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
 }
