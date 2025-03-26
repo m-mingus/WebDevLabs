@@ -1,0 +1,170 @@
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "nav nav"
+        "figure main"
+        "bottom-content bottom-content"
+        "footer footer";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-gap: 1rem;
+    min-width: none;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    grid-area: header;
+    background-color: #f1f1f1;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+figure {
+    grid-area: figure;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    grid-area: main;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+summary {
+    grid-area: bottom-content;
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: auto;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #f1f1f1;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+
+/* nav styling */
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2c5282;
+}
+
+/* Active link styling */
+.nav-links a.active {
+    color: #ff0000;
+    font-weight: bold;
+    border-bottom: 2px solid #ff0000;
+}
+
+/* lab 6 step 6 */
+#webname {
+    animation: colorChange 5s infinite alternate;
+}
+
+/* mobile design lab 6 step 3 */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-areas:
+            "header"
+            "nav"
+            "figure"
+            "main"
+            "bottom-content"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+    
+    .hamburger-menu {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links.show {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+    }
+    
+    nav {
+        flex-direction: column;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #315179;
+        transform: scale(1);
+    }
+    50% {
+        color: #4299e1;
+        transform: scale(1.05);
+    }
+    100% {
+        color: #2c5282;
+        transform: scale(1);
+    }
+}

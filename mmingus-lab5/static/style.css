@@ -1,0 +1,180 @@
+* {
+    font-family: 'Roboto', Arial, sans-serif;
+    padding: 5px;
+    margin: 5px;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings: "GRAD" 0, "slnt" 0;
+}
+
+#webname {
+    background-color: #cacaca;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #2c5282; 
+}
+
+/* step 7 */
+th {
+    padding: 12px 0;
+    background-color: #9b9b9b;
+    color: rgb(0, 0, 0);
+    width: fit-content;
+}
+tr:nth-child(even) {
+    background-color: #d5d5d5;
+}
+
+/* step 8 */
+form * {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+/* styling for tables */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px 0;
+}
+
+/* Bio section styling */
+#bio-section {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #a7a7a7;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+/* Button styling for lab 4 */
+#read-more-btn, #read-less-btn, #show-list-btn {
+    background-color:  blue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: background-color 0.3s;
+}
+
+#read-more-btn:hover, #read-less-btn:hover, #show-list-btn:hover {
+    background-color: #1a365d;
+}
+
+#show-list-btn {
+    background-color: #46a149;
+}
+
+#show-list-btn:hover {
+    background-color: #3e8e41;
+}
+
+input[type="submit"] {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: blue;
+}
+
+
+.invalid-input {
+    border: 2px solid red !important;
+    background-color: #ffeeee;
+}
+
+#validation-message {
+    width: max-content;
+    margin: auto;
+}
+
+
+.funIMG {
+    border-radius: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+}
+
+#advice-button {
+    background-color: #46a149;
+    color: white;
+    border-radius: 100%;
+    display: inline-block;
+    border-radius: 10%;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+#advice-button:hover {
+    background-color: #3e8e41;
+}   
+
+.container {
+    display: inline-block;
+    border-radius: 10%;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 15px auto;
+    display: flex;
+}
+
+.container button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30%;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* flexbox layout lab 5 */
+.mainLayout {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#item1, #item2, #item3, #item4 {
+    width: 40vw;
+    margin: auto;
+}
+
+iframe {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    margin-top: 30px;
+    padding: 15px 0;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}

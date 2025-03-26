@@ -2,47 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Matthew Mingus">
     <meta name="keywords" content="Carnegie Mellon University, Information Systems">
     <meta name="description" content="Matthew Mingus professional website">
     <title>Matthew Mingus</title>
-
     <link rel="stylesheet" href="../static/style.css">
-    <link rel="stylesheet" href="../static/template.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
     <script src="../static/script.js" defer></script>
 </head>
-
-<body onload="addYear()">
-    <div class="grid-container">
-        <header>
-            <h1 id="webname">Matthew Mingus</h1>
-        </header>
-        
+<body onload="addYear()" style="font-family: Arial">
+    <header>
+        <h1 id="webname">Matthew Mingus</h1>
         <nav>
-            <div class="hamburger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links">
+            <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="cv.html">CV</a></li>
                 <li><a href="contact.html">Contact me</a></li>
                 <li><a href="fun.html">For fun</a></li>
             </ul>
         </nav>
-        
-        <figure>
-            <img src="../static/funIMG.jpg" class="funIMG" alt="Fun Image">
-        </figure>
-        
-        <main>
+    </header>
+    
+    <div class="mainLayout">
+        <div class="item1">
             <h2>Things I love to do for fun</h2>
+            <!-- <button id="show-list-btn" onclick="showList()">Click to see...</button> -->
             <ul id="fun-list">
                 <li>Playing soccer/ basketball</li>
                 <li>Watching sports</li>
@@ -50,29 +36,36 @@
                 <li>Traveling</li>
                 <li>Watching movies</li>
             </ul>
-            
-            <h2>Cool video</h2>
-            <iframe width="80%" height="400" 
-                src="https://www.youtube.com/embed/jNQXAC9IVRw?si=0_o2lik4ChPl6IrT" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-            </iframe>
-        </main>
+        </div>
         
-        <summary>
-            <div class="container">
+        <div class="item2">
+            <img src="../static/funIMG.jpg" class="funIMG">
+        </div>
+        
+        <div class="item3">
+            <h2>Cool video</h2>
+            <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/jNQXAC9IVRw?si=0_o2lik4ChPl6IrT" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+        
+        <div class="item4">
+            <div class = "container">
                 <h2>Need some advice?</h2>
-                <p id="adviceText">Click the button to get a random piece of advice</p>
+                <p id = "adviceText">Click the button to get a random piece of advice</p>
                 <button id="advice-button" onclick="getAdvice()">Get Advice</button>
             </div>
-        </summary>
-        
-        <footer>
-            <p><span id="copyYear"></span> Matthew Mingus.</p>
-        </footer>
+
+        </div>
     </div>
+    
+    <footer>
+        <p> <span id="copyYear"></span> Matthew Mingus.</p>
+    </footer>
 </body>
 </html>

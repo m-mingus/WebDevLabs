@@ -1,45 +1,45 @@
 // step 4
-var x = 5, y = 7, z = x + y;
+// var x = 5, y = 7, z = x + y;
 
-console.log(z);
+// console.log(z);
 
-let A = "Hello ";
-let B = "world!";
-let C = A + B;
-console.log(C);
-
-
-// step 5
-function SumNPrint(x1, x2){
-    let x3 = x1 + x2;
-    console.log(x3);
-}
-
-SumNPrint(x, y);
-SumNPrint(A, B);
+// let A = "Hello ";
+// let B = "world!";
+// let C = A + B;
+// console.log(C);
 
 
-// step 6
-if (C.length > z) {
-    console.log(C);
-} else if (C.length < z) {
-    console.log(z);
-} else {
-    console.log("good job!");
-}
+// // step 5
+// function SumNPrint(x1, x2){
+//     let x3 = x1 + x2;
+//     console.log(x3);
+// }
+
+// SumNPrint(x, y);
+// SumNPrint(A, B);
 
 
-// step 7
-let L1 = ["Watermelon", "Pineapple", "Pear", "Banana"];
-let L2 = ["Apple", "Banana", "Kiwi", "Orange"];
+// // step 6
+// if (C.length > z) {
+//     console.log(C);
+// } else if (C.length < z) {
+//     console.log(z);
+// } else {
+//     console.log("good job!");
+// }
 
-function findTheBanana(L) {
-    for (let i = 0; i < L.length; i++) {
-        if (L[i] === "Banana") {
-            alert("found the Banana in " + i);
-        }
-    }
-}
+
+// // step 7
+// let L1 = ["Watermelon", "Pineapple", "Pear", "Banana"];
+// let L2 = ["Apple", "Banana", "Kiwi", "Orange"];
+
+// function findTheBanana(L) {
+//     for (let i = 0; i < L.length; i++) {
+//         if (L[i] === "Banana") {
+//             alert("found the Banana in " + i);
+//         }
+//     }
+// }
 
 // findTheBanana(L1);
 // findTheBanana(L2);
@@ -47,14 +47,14 @@ function findTheBanana(L) {
 
 
 // step 8
-function findTheBananaForEach(L) {
-    const positions = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth', 'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth', 'twentieth'];    
-    L.forEach(function(item, index) {
-        if (item === "Banana") {
-            alert("We found a banana in the " + positions[index] + " position");
-        }
-    });
-}
+// function findTheBananaForEach(L) {
+//     const positions = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth', 'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth', 'twentieth'];    
+//     L.forEach(function(item, index) {
+//         if (item === "Banana") {
+//             alert("We found a banana in the " + positions[index] + " position");
+//         }
+//     });
+// }
 
 // findTheBananaForEach(L1);
 // findTheBananaForEach(L2);
@@ -76,17 +76,12 @@ function greetingFunc() {
         greeting = "Good night";
     }
 
-    // step 10
-    if (window.location.href.includes("index.html") || window.location.pathname === "/" || window.location.pathname.endsWith("/")) {
-        const E = document.getElementById("greeting");
-        if (E) {
-            E.innerHTML = greeting + ", my name is Matthew";
-        }
+    // set the greeting message
+    const greetingElement = document.getElementById('greeting');
+    if (greetingElement) {
+        greetingElement.textContent = greeting + ", my name is Matthew";
     }
 }
-
-greetingFunc();
-
 
 // lab 4 step 2
 function addYear() {
@@ -141,4 +136,40 @@ function getAdvice() {
     .then(data => document.getElementById("adviceText").innerText = data.slip.advice)
     // handle errors with .catch() to show error message if something goes wrong
     .catch(error => console.log('error', error));
+}
+
+
+//// lab 6 hamburger menu
+document.addEventListener('DOMContentLoaded', function() {
+
+    greetingFunc();
+
+    // hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('show');
+    });
+    highlightCurrentPage();
+});
+
+// highlight active page in nav
+function highlightCurrentPage() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        
+        // check if the current path ends with the link's href
+        if (currentPath.endsWith(linkPath)) {
+            link.classList.add('active');
+        } 
+        // check with home page for special case
+        else if ((currentPath.endsWith('/') || currentPath.endsWith('/index.html')) && 
+                    linkPath === 'index.html') {
+            link.classList.add('active');
+        }
+    });
 }
